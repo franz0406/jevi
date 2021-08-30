@@ -53,7 +53,7 @@ header>div .depth2>li>a{
     background: #07399c;
 }
 header>div .depth2 a.more-depth{
-    background: url(http://www.jevisco.com/front/kr/asset/images/common/bu_2depth.png)no-repeat 16.6rem 1.8rem,#07399c;
+    background: url(../image/icons/bu_2depth.png)no-repeat 16.6rem 1.8rem,#07399c;
 }
 /* Depth 3 */
 header>div .depth3{
@@ -83,7 +83,7 @@ header>div>.search-box>.search{
     width:9.1rem;   height:3.6rem;
     padding-left:1rem;
     color:#fff;
-    background:url(http://www.jevisco.com/front/kr/asset/images/common/ic_search.png)no-repeat 6.4rem 0.8rem,#424c51;
+    background:url(../image/icons/ic_search.png)no-repeat 6.4rem 0.8rem,#424c51;
     box-sizing: border-box;
 }
 header>div>.search-box>.lang{
@@ -91,7 +91,7 @@ header>div>.search-box>.lang{
     font-weight: bold;
     text-align: center;
     border:0.1rem solid #a9b0b8;
-    background: url(http://www.jevisco.com/front/kr/asset/images/common/country_off.png)no-repeat 2rem 2.6rem,#fff;
+    background: url(../image/icons/country_off.png)no-repeat 2rem 2.6rem,#fff;
     box-sizing: border-box;
 }
 /* 이벤트 */
@@ -109,7 +109,7 @@ header>div .depth2 a:hover{
     background: #fff;
 }
 header>div .depth2 a.more-depth:hover{
-    background: url(http://www.jevisco.com/front/kr/asset/images/common/bu_2depth_on.png)no-repeat 16.6rem 1.8rem,#fff;
+    background: url(../image/icons/bu_2depth_on.png)no-repeat 16.6rem 1.8rem,#fff;
 }
 header>div .depth2 a.more-depth:hover+.depth3{
     display: block;
