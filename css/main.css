@@ -4,7 +4,6 @@ main{
     background: #dbdbdb;
 }
 main>.video-box{
-    width:100%;
     max-width: 120rem;
     margin: 0 auto;
 }
@@ -17,7 +16,7 @@ main>.contents{
     padding-top: 5rem;
 }
 main>.contents>.card-list{
-    width:120rem;
+    max-width:120rem;
     margin: 0 auto;
 }
 main>.contents>.card-list>ul{
@@ -51,29 +50,29 @@ main>.contents>.card-list>ul>li:hover>a>div>img{
     right:0;
 }
 
-/* 뉴스 & 회사정보 */
+/* 뉴스 */
 main>.contents>section{
     display: flex;
-    width:120rem;
+    justify-content: space-between;
+    max-width:120rem;
     margin: 0 auto;
 }
-main>.contents>section>.news{
+main>.contents>section>.news>div{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width:38.7rem;  height:68.2rem;
+    width:38.7rem;  height:68.4rem;
     margin-top: 5rem;
+    padding:0 2rem;
     border-top:0.2rem solid #014ba9;
     box-sizing: border-box;
 }
-main>.contents>section>.news>div{
-    padding:0 2rem;
-}
 main>.contents>section>.news>div>h2{
     font:2.6rem/6.4rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    color:#014bbc;
     border-bottom:0.1rem solid #e1e1e1;
 }
-main>.contents>section>.news article>h3{
+main>.contents>section>.news article>span{
     margin: 2rem 0 1.5rem 0;
 }
 main>.contents>section>.news article>dl>dt>a{
@@ -105,6 +104,10 @@ main>.contents>section>.news .news-list>ul>li>ul>li{
     width: 34.7rem;
     justify-content: space-between;
     align-items: center;
+    border-top:0.1rem solid #e1e1e1;
+}
+main>.contents>section>.news .news-list>ul>li>ul>li:last-of-type{
+    border-bottom:0.1rem solid #e1e1e1;
 }
 main>.contents>section>.news .news-list>ul>li>ul>li>a{
     display: inline-block;
@@ -119,7 +122,25 @@ main>.contents>section>.news .news-list>ul>li>ul>li>time{
     font:1.3rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
     color:#929292;
 }
-/* 보도자료 버튼 */
+main>.contents>section>.news .controler{
+    margin:4.3rem 0 1.4rem 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+main>.contents>section>.news .controler button{
+    border: none;
+    background: none;
+}
+main>.contents>section>.news .controler span{
+    display: inline-block;
+    width:1.2rem;   height:1.2rem;
+    margin:0 0.3rem;
+    border:0.2rem solid #727272;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+/* 보도자료 오렌지색 버튼 */
 .news-button{
     display: inline-block;
     width:5.7rem;
@@ -128,4 +149,76 @@ main>.contents>section>.news .news-list>ul>li>ul>li>time{
     text-align: center;
     color:#e17350;
     border:0.1rem solid #e17350;
+}
+/* 회사정보 */
+main>.contents>section>.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:79.5rem;  height:68.4rem;
+    margin-top: 5rem;
+}
+main>.contents>section>.info *{
+    box-sizing: border-box;
+}
+main>.contents>section>.info>div{
+    display: flex;
+    justify-content: space-between;
+    width:79.3rem;
+}
+main>.contents>section>.info>div>div{
+    width:38.7rem;
+    height:31.7rem;
+    border-top:0.2rem solid #014ba9;
+}
+main>.contents>section>.info>div>div>div{
+    padding:0 2rem;
+}
+main>.contents>section>.info h3{
+    font:2.6rem/2.6rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    margin-top: 2rem;
+    color:#014bbc;
+    background: url(../image/icons/img_menu_more02.png)no-repeat 100% 0;
+}
+main>.contents>section>.info p{
+    margin-top: 2rem;
+    margin-bottom: 3.8rem;
+    font:1.4rem/1.4rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    color:#014bbc;
+}
+main>.contents>section>.info img{
+    width:38.4rem;  height:19.4rem;
+}
+/* 메인 하단 메뉴 */
+main>.contents .bottom-menu{
+    max-width: 120rem;
+    margin: 8rem auto 0;
+}
+main>.contents .bottom-menu>dl{
+    display: flex;
+    justify-content: space-between;
+}
+main>.contents .bottom-menu>dl>dd{
+    width:38.7rem;
+    border: 0.1rem solid #ccc;
+    box-sizing: border-box;
+}
+main>.contents .bottom-menu>dl>dd>a{
+    display: block;
+    width:100%;
+    font:1.8rem/9.9rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    text-indent: 9rem;
+    color:#014ba9;
+}
+main>.contents .bottom-menu>dl>dd:nth-of-type(1){
+    background:url(../image/icons/bg_main_btn01.png)no-repeat 2.8rem 50%,
+               url(../image/icons/img_menu_more.png)no-repeat 95% 50%;
+}
+main>.contents .bottom-menu>dl>dd:nth-of-type(2){
+    background:url(../image/icons/bg_main_btn02.png)no-repeat 2.8rem 50%,
+               url(../image/icons/img_menu_more.png)no-repeat 95% 50%;
+}
+main>.contents .bottom-menu>dl>dd:nth-of-type(3){
+    background:url(../image/icons/bg_main_btn03.png)no-repeat 2.8rem 50%,
+               url(../image/icons/img_menu_more.png)no-repeat 95% 50%;
 }
