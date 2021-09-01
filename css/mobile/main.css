@@ -1,0 +1,229 @@
+/* 비디오 */
+aside{
+    margin-top: 8.3rem;
+    background: #dbdbdb;
+}
+aside video{
+    width:100%;
+}
+/* 제비스코 주요 내용 카드 리스트 */
+.jev-card{
+    margin-top: 5rem;
+}
+.jev-card ul{
+    display:flex;
+    flex-wrap: wrap;
+}
+.jev-card ul>li{
+    position: relative;
+    flex-basis: 50%;
+}
+.jev-card ul>li>a{
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+.jev-card ul>li img{
+    width:100%;
+}
+.jev-card ul>li .second{
+    position: absolute;
+    left: 0;    top: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.jev-card ul>li .object{
+    position: absolute;
+    height: 65%;
+    bottom: 0.2rem;  right:-15%;
+    transition: all 0.8s ease;
+}
+/* --------카드 리스트 이벤트--------- */
+.jev-card ul>li:hover .second{
+    opacity: 1;
+}
+.jev-card ul>li:hover .object{
+    right:-5%;
+}
+/* 메인 뉴스 */
+.main-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5rem 2rem 0;
+    justify-content: space-between;
+    gap:2rem;
+}
+/* 뉴스 */
+.main-container .news-wraper>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+    gap:2rem;
+    padding:0 2rem;
+}
+.main-container .news-wraper>h1{
+    padding:0 2rem;
+    font-size:2.6rem;
+    line-height:6.4rem;
+    color:#014bbc;
+    border-bottom:0.1rem solid #e1e1e1;
+    border-top:0.2rem solid #014ba9;
+}
+.main-container .news-wraper article>span{
+    margin: 2rem 0 1.5rem 0;
+}
+.main-container .news-wraper article>dl>dt>a{
+    font-size:1.8rem;
+    font-weight: bold;
+    line-height:2.6rem;
+    letter-spacing: 0.1rem;
+    color:#222;
+}
+.main-container .news-wraper article>dl>dd{
+    padding-top:1.3rem;
+    font:1.3rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    color:#666;
+}
+.main-container .news-wraper article>p{
+    margin: 2.5rem 0;
+    font:1.4rem/2.2rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    letter-spacing: 0.1rem;
+    color:#666;
+}
+/* 뉴스리스트 */
+.news-list{
+    overflow: hidden;
+}
+.news-list>ul{
+    display: flex;
+    width:200%;
+}
+.news-list>ul>li{
+    width:50%;
+}
+.news-list>ul>li>ul>li{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-top:0.1rem solid #e1e1e1;
+}
+.news-list>ul>li>ul>li>a{
+    flex:1;
+    font-size:1.4rem;
+    line-height:6rem;
+    color:#3d3d3d;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow: ellipsis;
+}
+.news-list>ul>li>ul>li>time{
+    margin-left: auto;
+    padding-left: 1rem;
+    font-size:1.3rem;
+    color:#929292;
+}
+/* 뉴스 리스트 컨트롤러 */
+.news-list>.controler{
+    margin:4.3rem 0 1.4rem 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.news-list>.controler button{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.news-list>.controler span{
+    display: inline-block;
+    width:1.2rem;   height:1.2rem;
+    margin:0 0.3rem;
+    border:0.2rem solid #727272;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* 보도자료 오렌지 박스 */
+.news-button{
+    display: inline-block;
+    width:5.7rem;
+    margin-right: 0.6rem;
+    font:1.2rem/1.9rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    text-align: center;
+    color:#e17350;
+    border:0.1rem solid #e17350;
+}
+/* 회사정보 */
+.main-container .company-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:2rem;
+    width:100%;
+}
+.main-container .company-info>section{
+    flex-basis: 100%;
+}
+.main-container .company-info>section>div{
+    padding:0 2rem;
+    border-top:0.2rem solid #014ba9;
+}
+.main-container .company-info>section h1{
+    font:2.6rem/2.6rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    margin-top: 2rem;
+    color:#014bbc;
+    background: url(../../image/icons/img_menu_more02.png)no-repeat 100% 0;
+}
+.main-container .company-info>section p{
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    font:1.4rem/1.4rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    color:#014bbc;
+}
+.main-container .company-info>section img{
+    width: 100%;
+}
+/* 하단 기타 내용 */
+.bottom-menu{
+    padding-top: 8rem;
+}
+.bottom-menu>dl{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap:2rem;
+}
+.bottom-menu>dl>dd{
+    width:90%;
+    margin: 0 auto;
+    border: 0.1rem solid #ccc;
+    box-sizing: border-box;
+}
+.bottom-menu>dl>dd>a{
+    display: block;
+    width:100%;
+    font:1.8rem/7rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    text-indent: 9rem;
+    color:#014ba9;
+}
+.bottom-menu>dl>dd:nth-of-type(1){
+    background:url(../../image/icons/bg_main_btn01.png)no-repeat 2.8rem 50%,
+               url(../../image/icons/img_menu_more.png)no-repeat 95% 50%;
+}
+.bottom-menu>dl>dd:nth-of-type(2){
+    background:url(../../image/icons/bg_main_btn02.png)no-repeat 2.8rem 50%,
+               url(../../image/icons/img_menu_more.png)no-repeat 95% 50%;
+}
+.bottom-menu>dl>dd:nth-of-type(3){
+    background:url(../../image/icons/bg_main_btn03.png)no-repeat 2.8rem 50%,
+               url(../../image/icons/img_menu_more.png)no-repeat 95% 50%;
+}
+/* 위로가기버튼 */
+.toTop{
+    display: block;
+    position: fixed;
+    width:5rem; height:5rem;
+    right:2rem;
+    bottom:2rem;
+    background:url(../../image/icons/btn_top_over.png)no-repeat;
+}

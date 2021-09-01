@@ -1,0 +1,73 @@
+footer{
+    margin-top: 10rem;
+}
+/* 푸터 헤더 */
+footer>header{
+    background:#273238;
+}
+footer>header>div{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    /* height:5.5rem; */
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+/* a태그 공통사항 */
+footer>header>div a{
+    font:1.4rem/1.4rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    color:#a1a1a1;
+}
+footer>header>div>dl{
+    display: flex;
+    height:5.5rem;
+    align-items: center;
+}
+footer>header>div>dl>dd{
+    position: relative;
+    padding-right:2rem;
+}
+footer>header>div>dl>dd:not(:last-of-type):after{
+    position: absolute;
+    content:"";
+    top:50%;    right:0.9rem;
+    transform:translateY(-50%);
+    width:0.1rem;   height:1.3rem;
+    background:#a1a1a1;
+}
+footer>header>div>dl>dd:last-of-type>dl{
+    display: flex;
+    align-items: center;
+}
+footer>header>div>dl>dd:last-of-type>dl img{
+    padding-top: 1rem;
+}
+/* 패밀리사이트 */
+footer>header>div>div.family{
+    display: none;
+}
+footer>header>div>select.family{
+    width:52rem;    height:6rem;
+    padding:2rem;
+    margin-bottom: 2rem;
+    color: #a1a1a1;
+    outline: none;
+    background: #1f292e;
+}
+/* 어드레스 */
+footer>address{
+    background:#e9eaeb;
+}
+footer>address>div{
+    max-width:120rem;
+    margin: 0 auto;
+    padding:2.4rem 0 0 20rem;
+    height:10rem;
+    font:1.2rem/1.2rem "NanumBarunGothic", 돋움, Dotum, sans-serif;
+    color:#333;
+    box-sizing: border-box;
+    background:url(../../image/logo/bg_foot_logo.png)no-repeat 0 2.4rem;
+}
+

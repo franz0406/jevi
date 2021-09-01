@@ -1,0 +1,199 @@
+@import url(main.css);
+@import url(footer.css);
+@font-face{
+    font-family: "NanumBarunGothic";
+    src:url(../../fonts/NanumBarunGothic.eot);
+    src:local('※'),url(../../fonts/NanumBarunGothic.ttf), url(../../fonts/NanumBarunGothic.woff);
+}
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-family: "NanumBarunGothic",sans-serif;
+}
+.center{
+    max-width:120rem;
+    margin: 0 auto;
+}
+/* 테블릿헤더 */
+.tablet_header{
+    display: none;
+}
+body>header{
+    position: fixed;    top:0;  left:0;
+    width:100%;
+    background: #fff;
+    box-shadow: 0 0.5rem 0.5rem rgba(0,0,0,0.2);
+    z-index: 1;
+}
+body>header>div{
+    display: flex;
+    position: relative;
+    max-width:120rem;
+    height: 8.3rem;
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+/* 네이게이터 */
+.depth1{
+    display: flex;
+}
+.depth1>li{
+    position: relative;
+    height:8.3rem;
+}
+.depth1>li:not(:last-of-type){
+    padding-right:6.8rem;
+}
+.depth1>li>a{
+    font-size:1.6rem;
+    line-height: 8.3rem;
+    color:#222;
+}
+/* depth2 */
+.depth2{
+    display: none;
+    border:0.1rem solid #0c215d;
+}
+.depth2>li{
+    position: relative;
+    background: #07399c;
+    display: block;
+    width: 18.5rem;
+    padding-left: 2rem;
+    font-size:1.4rem;
+    line-height:4.3rem;
+    border-bottom:0.1rem solid #0c215d;
+}
+.depth2>li>a{
+    color:#fff;
+}
+.depth2>li.to-depth3{
+    background: url(../../image/icons/bu_2depth.png)no-repeat 95% 50%,#07399c;
+}
+/* depth3 */
+.depth3{
+    display: none;
+}
+.depth3>li>a{
+    display: block;
+    width: 18.5rem;
+    padding-left: 0.5rem;
+    font-size:1.4rem;
+    line-height:4.3rem;
+    color:#222;
+    background: #fff;
+}
+/* --------- 네비게이터 이벤트---------- */
+.depth1>li>a:hover{
+    padding-bottom: 1.2rem;
+    border-bottom:0.3rem solid #07399c;
+}
+.depth1>li:hover .depth2{
+    position: absolute;
+    display: block;
+    top:100%;   left:-2.5rem;
+}
+.depth2>li.to-depth3:hover{
+    background: url(../../image/icons/bu_2depth_on.png)no-repeat 95% 50%,#fff;
+}
+.depth2>li.to-depth3:hover>a{
+    color:#222;
+}
+.depth2>li:hover>.depth3{
+    display: block;
+    position: absolute;
+    top:-0.1rem;
+    left:100%;
+    border:0.1rem solid #0c215d;
+}
+/* 검색창 & 언어변경 */
+.search-box{
+    display: flex;
+}
+/* 검색박스 */
+.search-box .serch-btn{
+    width:9.1rem;   height:3.6rem;
+    font-size:1.2rem;
+    text-align: left;
+    text-indent: 0.5rem;
+    color:#fff;
+    border: 0 none;
+    border-radius:0.5rem;
+    background:url(../../image/icons/ic_search.png)no-repeat 90% 50%,#424c51;
+    cursor: pointer;
+}
+.search-box form{
+    display: flex;
+    display: none;
+    width:32rem;    height:5rem;
+    position: absolute;
+    top:100%;   right:0;
+    background: #434c51;
+    transition: all 0.3s ease;
+}
+.search-box form>input[type="search"]{
+    width:100%;
+    color:#fff;
+    padding-left:2rem;
+    border: 0 none;
+    background: #434c51;
+}
+.search-box form>input[type="search"]::placeholder{
+    color:#ebebeb;
+}
+.search-box form>input[type="image"]{
+    margin-top: 1.3rem;
+    width:2.2rem;   height:2.2rem;
+}
+.search-box form>p{
+    margin-top: 1rem;
+    width:5.3rem;
+    background: url(../../image/icons/sch_close_line.png)no-repeat 1rem 0,
+                url(../../image/icons/ic_close_search_m.png)no-repeat 1.9rem 0.8rem/1.4rem 1.4rem;
+}
+.search-box>div:last-of-type{
+    position: relative;
+}
+/* 언어변경 박스 */
+.search-box .lang-btn{
+    width:4.6rem;   height:3.6rem;
+    margin-left: 0.3rem;
+    font-weight: bold;
+    text-align: center;
+    border:0.1rem solid #a9b0b8;
+    border-radius: 0.5rem;
+    background: url(../../image/icons/country_off.png)no-repeat 2rem 2.6rem,#fff;
+    cursor: pointer;
+}
+.search-box .lang-btn+ul{
+    position: absolute;
+    top:100%;   right:0;
+    height:0;
+    overflow: hidden;
+    transition:height 0.5s ease;
+}
+.search-box .lang-btn+ul>li{
+    width:4.6rem;   height:3rem;
+    line-height: 3rem;
+    margin-left: 0.3rem;
+    font-weight: bold;
+    text-align: center;
+    border:0.1rem solid #a9b0b8;
+    background: #fff;
+}
+.search-box .lang-btn+ul>li>a{
+    color:#666;
+}
+/* --------검색박스 이벤트--------- */
+.search-box .serch-btn+form.on{
+    display: block;
+    display: flex;
+}
+.search-box .lang-btn+ul.active{
+    height:6rem;
+}
